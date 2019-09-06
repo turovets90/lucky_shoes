@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Категори товаров</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!--link(rel="shortcut icon" href="img/favicon.ico")-->
+    <link rel="stylesheet" href="css/main.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row header_row">
+          <div class="col-12 col-sm-12 col-md-4 col-xl-6 col_left">
+            <div class="logo_block"><a href="#"><img src="img/logo_black.svg"/></a></div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-8 col-xl-6 col_right">
+            <div class="h_flex">
+              <div class="header_contacts">
+                <ul class="header_contacts_list">
+                  <li><a href="tel:+375 (44) 777-77-77">+375 (44) 777-77-77</a></li>
+                  <li><a href="tel:+375 (44) 777-77-77">+375 (44) 777-77-77</a></li>
+                  <li>Ежедневно <span>10:00—20:00</span></li>
+                </ul>
+              </div>
+              <div class="cart_block"><a class="cart_link" href="#">
+                  <div class="icon"><img src="img/cart.png"/><span class="count">2</span></div>
+                  <div class="cart_text">
+                    <div class="c_title">Корзина</div>
+                    <div class="c_price">Сумма 209 руб.</div>
+                  </div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="main_nav">
+        <div class="container">
+          <div class="nav_flex">
+            <div class="main_menu">
+              <div class="mm_close"></div>
+              <ul class="nav">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог обуви</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="search_block">
+              <form class="search_form">
+                <input class="form-control" type="text" placeholder="Поиск"/>
+                <button class="search_btn" type="submit"></button>
+              </form>
+              <div class="search_results"></div>
+            </div>
+            <div class="mm_btn">
+              <button class="hamburger"><span></span><span></span><span></span></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="page_content">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог обуви</a></li>
+          <li><span>Туфли</span></li>
+        </ul>
+        <button class="mobile_toggler" id="show_category">Категории товаров</button>
+        <div class="subcategory">
+          <ul class="subcategory_list">
+            <li><a href="#">Босоножки</a></li>
+            <li><a href="#">Сабо и мюли</a></li>
+            <li><a href="#">Ботинки, полусапоги</a></li>
+            <li><a href="#">Пантолеты (шлепанцы)</a></li>
+            <li><a href="#">Ботильоны</a></li>
+            <li><a href="#">Угги и дутики</a></li>
+            <li><a href="#">Сапоги</a></li>
+            <li><a href="#">Балетки</a></li>
+            <li><a href="#">Лоферы</a></li>
+            <li><a href="#">Эспадрильи</a></li>
+            <li><a href="#">Сапоги и ботильоны летние</a></li>
+            <li><a href="#">Слипоны</a></li>
+            <li><a href="#">Кроссовки и кеды</a></li>
+            <li class="active"><a href="#">Туфли</a></li>
+            <li><a href="#">Ботфорты</a></li>
+            <li><a href="#">Сандалии</a></li>
+          </ul>
+        </div>
+        <div class="sort_block"><span>Сортировать по:</span>
+          <div class="sort_select">
+            <select>
+              <option>Цене</option>
+              <option>По популярности</option>
+            </select>
+          </div>
+        </div>
+        <div class="row category_row">
+          <div class="col-12 col-sm-12 col-md-4 col-xl-3 sidebar">
+            <button class="mobile_toggler" id="show_filter">Фильтр</button>
+            <div class="filter">
+              <form class="form_filter">
+                <div class="filter_group">
+                  <div class="filter_group_title">Цена</div>
+                  <div id="price_range"></div>
+                  <div class="price_range_row">
+                    <div id="rub-left"></div>
+                    <div id="rub-right"></div>
+                  </div>
+                </div>
+                <div class="filter_group">
+                  <div class="filter_group_title">Тип каблука</div>
+                  <ul class="checkbox_group">
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input1"/>
+                        <label for="input1">Высокий</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input2"/>
+                        <label for="input2">Низкий</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input3"/>
+                        <label for="input3">Платформа</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input4"/>
+                        <label for="input4">Средний</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="filter_group">
+                  <div class="filter_group_title">Размер</div>
+                  <ul class="radio_group">
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_35"/>
+                        <label for="size_35">35</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_36"/>
+                        <label for="size_36">36</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_37"/>
+                        <label for="size_37">37</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_38"/>
+                        <label for="size_38">38</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_39"/>
+                        <label for="size_39">39</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_40"/>
+                        <label for="size_40">40</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_41"/>
+                        <label for="size_41">41</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_42"/>
+                        <label for="size_42">42</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_43"/>
+                        <label for="size_43">43</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_44"/>
+                        <label for="size_44">44</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input type="radio" name="size" id="size_45"/>
+                        <label for="size_45">45</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="filter_group">
+                  <div class="filter_group_title">Материал</div>
+                  <ul class="checkbox_group">
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input9"/>
+                        <label for="input9">Кожа</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input10"/>
+                        <label for="input10">Искусственный материал</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input11"/>
+                        <label for="input11">Кожа</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input12"/>
+                        <label for="input12">Искусственный материал</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="filter_group">
+                  <div class="filter_group_title">Размер каблука</div>
+                  <ul class="checkbox_group">
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input5"/>
+                        <label for="input5">Высокий</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input6"/>
+                        <label for="input6">Низкий</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input7"/>
+                        <label for="input7">Платформа</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox">
+                        <input type="checkbox" id="input8"/>
+                        <label for="input8">Средний</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="btn_group">
+                  <button class="btn_reset" type="reset">Очистить</button>
+                  <button class="btn_default" type="submit">Показать</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-8 col-xl-9">
+            <div class="row product_list">
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1 act">149.00 руб.</div>
+                      <div class="price2">110.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <div class="label">-31руб.</div>
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+                <div class="product_item"><a class="product_head" href="#">
+                    <picture><img src="img/image4.4.png"/></picture>
+                    <button class="show_product">Смотреть товар</button></a>
+                  <div class="product_body">
+                    <div class="product_title">Ideal Shoes</div>
+                    <div class="product_price">
+                      <div class="price1">149.00 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination_block">
+          <ul class="pagination">
+            <li><a class="prev" href="#"></a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a class="active" href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li><span>...</span></li>
+            <li><a href="#">15</a></li>
+            <li><a class="next" href="#"></a></li>
+          </ul>
+        </div>
+        <div class="page_seotext">
+          <p>Поставляем итальянскую обувь с лучших фабрик: работаем напрямую с производителями, поэтому предлагаем актуальные модели. Переживаете, что не подойдет размер? Наш консультант поможет подобрать нужный, замеряет стельку или отправит с курьером несколько пар смежных размеров. Обращайтесь за помощью по телефону или оставляйте онлайн-заявку. Обработаем заявку в течение 10-30 минут. Принимаем заказы и консультируем ежедневно с 10:00 до 20:00.</p>
+          <p>Приобретайте модную женскую обувь из натуральной кожи в интернет-магазине Mario Berluchi онлайн: выбирайте понравившуюся модель, отправляйте в корзину и оплачивайте наличными, картой или через ЕРИП. Заказывайте бесплатную доставку в любой город РБ. Забирайте товар самостоятельно или заказывайте курьерскую доставку. Пункты самовывоза работаю в Минске, Бресте, Могилеве, Гродно и других городах Беларуси.</p>
+          <p>Для постоянных покупателей действует специальная бонусная программа – накапливайте скидки и бонусные баллы и покупайте итальянскую обувь по сниженной цене.</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row footer_row">
+          <div class="col-12 col-sm-12 col-sm-6 col-xl-6 col_left">
+            <div class="logo"><a href="#"><img src="img/logo_white.svg"/></a></div>
+            <ul class="footer_contacts_list">
+              <li><a href="tel:+375 (44) 777-77-77">+375 (44) 777-77-77</a></li>
+              <li><a href="tel:+375 (44) 777-77-77">+375 (44) 777-77-77</a></li>
+              <li>Ежедневно <span>10:00—20:00</span></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-12 col-sm-6 col-xl-6 col_right">
+            <div class="f_menu">
+              <ul class="nav">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог обуви</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <p>Место для строк копирайта. зарегистрирован в торговом реестре Республики Беларусь 07.09.2016 Гомельским городским исполнительным комитетом</p>
+              <p>Интернет-магазин - салон обуви Mario Berluchi™</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

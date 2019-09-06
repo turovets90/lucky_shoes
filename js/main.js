@@ -36,6 +36,40 @@ $(document).ready(function(){
     }
 
 
+    $("#price_range").slider({
+        range: true,
+        min: 0,
+        max: 350,
+        values: [0, 150],
+        step: 1,
+        slide: function(event, ui) {
+            $("#rub-left").text(ui.values[0] + ' руб.');
+            $("#rub-right").text(ui.values[1] + ' руб.');
+            /*
+            if (ui.handleIndex === 0) {
+                // потянули левый ползунок - переместим левый span
+                $("#rub-left").css('margin-left', ui.handle.style.left);
+            } else {
+                // потянули правый ползунок - переместим правый span
+                $("#rub-right").css('margin-left', ui.handle.style.left);
+            }*/
+        }
+    });
+
+    $("#rub-left").text($("#price_range").slider("values", 0) + ' руб.');
+    $("#rub-right").text($("#price_range").slider("values", 1) + ' руб.');
+
+
+
+    $('#show_category').click(function(){
+        $(this).toggleClass('act').next().slideToggle();
+    });
+
+    $('#show_filter').click(function(){
+        $(this).toggleClass('act').next().slideToggle();
+    });
+
+
 /*
     $('.main_menu .arrow').on('click',function () {
         $(this).toggleClass('rotate');
