@@ -104,6 +104,31 @@ $(document).ready(function(){
     });
 
 
+    $(".dropdown-menu li p").click(function(){
+        $(this).parents(".dropdown").find('.address').html($(this).html());
+        $(this).parents(".dropdown").find('.address').val($(this).data('value'));
+    });
+
+
+
+   $('input#pickup').click(function(){
+       $('.courier_checked').removeClass('active');
+       $('.pickup_checked').addClass('active');
+
+   });
+
+    $('input#courier').click(function(){
+        $('.pickup_checked').removeClass('active');
+        $('.courier_checked').addClass('active');
+    });
+
+
+
+
+
+
+
+
 
     /*
         $('.main_menu .arrow').on('click',function () {

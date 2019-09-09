@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Оформление заказа</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!--link(rel="shortcut icon" href="img/favicon.ico")-->
+    <link rel="stylesheet" href="css/main.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row header_row">
+          <div class="col-12 col-sm-12 col-md-4 col-xl-6 col_left">
+            <div class="logo_block"><a href="#"><img src="img/logo_black.svg"/></a></div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-8 col-xl-6 col_right">
+            <div class="h_flex">
+              <div class="header_contacts">
+                <ul class="header_contacts_list">
+                  <li><a href="tel:+375 (44) 777-77-77">+375 (44) 777-77-77</a></li>
+                  <li><a href="tel:+375 (44) 777-77-77">+375 (44) 777-77-77</a></li>
+                  <li>Ежедневно <span>10:00—20:00</span></li>
+                </ul>
+              </div>
+              <div class="cart_block"><a class="cart_link" href="#">
+                  <div class="icon"><img src="img/cart.png"/><span class="count">2</span></div>
+                  <div class="cart_text">
+                    <div class="c_title">Корзина</div>
+                    <div class="c_price">Сумма 209 руб.</div>
+                  </div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="main_nav">
+        <div class="container">
+          <div class="nav_flex">
+            <div class="main_menu">
+              <div class="mm_close"></div>
+              <ul class="nav">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог обуви</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="search_block">
+              <form class="search_form">
+                <input class="form-control" type="text" placeholder="Поиск"/>
+                <button class="search_btn" type="submit"></button>
+              </form>
+              <div class="search_results"></div>
+            </div>
+            <div class="mm_btn">
+              <button class="hamburger"><span></span><span></span><span></span></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="page_content">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li><span>Оформление заказа</span></li>
+        </ul>
+        <div class="container_title">
+          <h1>Оформление заказа</h1>
+        </div>
+        <div class="order_content">
+          <div class="order_product_list">
+            <div class="order_product_item">
+              <div class="order_product_img"><img src="img/image4.4.png"/></div>
+              <div class="order_product_content"><a class="order_product_title" href="#">Туфли женские Ideal Shoes</a>
+                <div class="quantity">1 шт.</div>
+                <div class="size">Размер: <span>38</span></div>
+                <button class="pr_remove"></button>
+              </div>
+            </div>
+          </div>
+          <form class="order_form">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-xl-3">
+                <p class="f_title">Доставка</p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-8 col-xl-9">
+                <ul class="delivery">
+                  <li>
+                    <input type="radio" name="delivery" id="pickup" checked="checked"/>
+                    <label for="pickup">Самовывоз</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="delivery" id="courier"/>
+                    <label for="courier">Доставка курьером</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-xl-3">
+                <p class="f_title">Имя</p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-8 col-xl-9">
+                <input class="form-control" type="text"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-xl-3">
+                <p class="f_title">Фамилия</p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-8 col-xl-9">
+                <input class="form-control" type="text"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-xl-3">
+                <p class="f_title">Телефон</p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-8 col-xl-9">
+                <input class="form-control" type="text"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-xl-3">
+                <p class="f_title">Адрес</p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-8 col-xl-9">
+                <div class="pickup_checked active">
+                  <div class="dropdown">
+                    <div class="dropdown-toggle address" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">ул. Семенова, 28, кв. 19 <span>Самовывоз / Минск</span></div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li>
+                        <p data-value="address_1">ул. Семенова, 30, кв. 110 <span>Самовывоз / Минск</span></p>
+                      </li>
+                      <li>
+                        <p data-value="address_1">ул. Семеноваd, 35, кв. 120 <span>Самовывоз / Минск</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <textarea class="courier_checked form-control"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-xl-3 pr-1">
+                <p class="f_title">Способ оплаты</p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-8 col-xl-9">
+                <ul class="payment_methods">
+                  <li>
+                    <input type="radio" name="payment_methods" id="pay1"/>
+                    <label for="pay1">Наличными</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="payment_methods" id="pay2"/>
+                    <label for="pay2">ЕРИП</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="payment_methods" id="pay3"/>
+                    <label for="pay3">Visa</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="payment_methods" id="pay4"/>
+                    <label for="pay4">Mastercard</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="total">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-xl-3"></div>
+                <div class="col-12 col-sm-12 col-md-8 col-xl-9">
+                  <div class="row">
+                    <div class="col-12 col-2m-12 col-md-6">
+                      <p>Сумма:</p>
+                      <p class="summa">179.00 руб.</p>
+                    </div>
+                    <div class="col-12 col-2m-12 col-md-6">
+                      <button class="btn_default" type="submit">Оплатить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row footer_row">
+          <div class="col-12 col-sm-12 col-sm-6 col-xl-6 col_left">
+            <div class="logo"><a href="#"><img src="img/logo_white.svg"/></a></div>
+            <ul class="footer_contacts_list">
+              <li><a href="tel:+375 (44) 777-77-77">+375 (44) 777-77-77</a></li>
+              <li><a href="tel:+375 (44) 777-77-77">+375 (44) 777-77-77</a></li>
+              <li>Ежедневно <span>10:00—20:00</span></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-12 col-sm-6 col-xl-6 col_right">
+            <div class="f_menu">
+              <ul class="nav">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог обуви</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <p>Место для строк копирайта. зарегистрирован в торговом реестре Республики Беларусь 07.09.2016 Гомельским городским исполнительным комитетом</p>
+              <p>Интернет-магазин - салон обуви Mario Berluchi™</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
