@@ -2213,6 +2213,11 @@ h1, .h1{
           min-width: 90px;
           height: 100px;
         }
+        @media (max-width:375px){
+          width: 70px;
+          min-width: 70px;
+          height: 78px;
+        }
         img{
             position: absolute;
           .m_a();
@@ -2237,6 +2242,10 @@ h1, .h1{
           @media (max-width:575px){
             font-size: 18px; margin-bottom: 8px;
           }
+          @media (max-width:375px){
+            font-size: 16px;
+            margin-bottom: 5px;    line-height: 1.2;
+          }
           &:hover, &:focus{
            text-decoration: none;
             color: @red;
@@ -2248,12 +2257,19 @@ h1, .h1{
           @media (max-width:575px){
             font-size: 16px;margin-bottom: 5px;
           }
+          @media (max-width:375px){
+            font-size: 14px;
+            margin-bottom: 0;
+          }
         }
         .size{
           font-size: 18px;
           color: rgba(28, 34, 43, 0.4);
           @media (max-width:575px){
             font-size: 16px;
+          }
+          @media (max-width:375px){
+            font-size: 14px;
           }
           span{
             color: @black;
