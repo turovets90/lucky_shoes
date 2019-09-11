@@ -418,78 +418,7 @@ header{
         @media (max-width:767px){
           max-height: 250px;
         }
-        .search_product_list{
-          width: 100%;
-          &.template_1{
-            li{
-              width: 100%;
-              a{
-                display: inline-block;color: rgba(28, 34, 43, 0.65);
-                width: 100%;
-                padding: 10px;
-                &:hover{
-                  background: rgba(28, 34, 43, 0.2);
-                  text-decoration: none;
-                }
-                strong{
-                  color: @black;
-                  font-weight: @bold;
-                }
-              }
-            }
-          }
-          &.template_2{
-            padding: 0 10px;
-            li{
-              border-bottom: 2px solid rgba(28, 34, 43, 0.3);
-              padding: 8px 0;
-              &:last-child{
-                border:0;
-              }
-              a{
-                .flex();
-                &:hover, &:focus{
-                  text-decoration: none;
-                  .text{
-                    p{
-                      color: @red;
-                    }}
-                }
 
-                .img{
-                  width: 70px;
-                  min-width: 70px;
-                  height: 70px;
-                  position: relative;
-                  background: #EDEDED;
-                  margin-right: 8px;
-                  img{
-                    position: absolute;
-                    .m_a();
-                    max-width: 98%;
-                    max-height: 98%;
-                  }
-                }
-                .text{
-                  p{
-                    font-size: 13px;
-                    color: @black;
-                    margin-bottom: 0;
-                    .transition(@transition_default);
-                    strong{
-                      font-weight: 900;
-                    }
-                  }
-                  .price{
-                    font-size: 13px;
-                    color: rgba(28, 34, 43, 0.4);
-                  }
-
-                }
-              }
-            }
-          }
-        }
 
 
       }
@@ -679,7 +608,78 @@ header{
 }
 
 
+.search_product_list{
+  width: 100%;
+  &.template_1{
+    li{
+      width: 100%;
+      a{
+        display: inline-block;color: rgba(28, 34, 43, 0.65);
+        width: 100%;
+        padding: 10px;
+        &:hover{
+          background: rgba(28, 34, 43, 0.2);
+          text-decoration: none;
+        }
+        strong{
+          color: @black;
+          font-weight: @bold;
+        }
+      }
+    }
+  }
+  &.template_2{
+    padding: 0 10px;
+    li{
+      border-bottom: 2px solid rgba(28, 34, 43, 0.3);
+      padding: 8px 0;
+      &:last-child{
+        border:0;
+      }
+      a{
+        .flex();
+        &:hover, &:focus{
+          text-decoration: none;
+          .text{
+            p{
+              color: @red;
+            }}
+        }
 
+        .img{
+          width: 70px;
+          min-width: 70px;
+          height: 70px;
+          position: relative;
+          background: #EDEDED;
+          margin-right: 8px;
+          img{
+            position: absolute;
+            .m_a();
+            max-width: 98%;
+            max-height: 98%;
+          }
+        }
+        .text{
+          p{
+            font-size: 13px;
+            color: @black;
+            margin-bottom: 0;
+            .transition(@transition_default);
+            strong{
+              font-weight: 900;
+            }
+          }
+          .price{
+            font-size: 13px;
+            color: rgba(28, 34, 43, 0.4);
+          }
+
+        }
+      }
+    }
+  }
+}
 
 .main_slider{
   margin-bottom: 30px;
@@ -1529,6 +1529,7 @@ footer{
   padding: 8px 15px;
   cursor: pointer;
   .transition(@transition_default);
+  text-decoration: none;
   @media (max-width:1200px){
     font-size: 20px;
   }
@@ -1537,6 +1538,8 @@ footer{
   }
   &:hover, &:focus{
     background: #b45958;
+    color: #fff;
+    text-decoration: none;
   }
 }
 
@@ -2262,7 +2265,7 @@ h1, .h1{
             margin-bottom: 0;
           }
         }
-        .size{
+        .size, .price{
           font-size: 18px;
           color: rgba(28, 34, 43, 0.4);
           @media (max-width:575px){
@@ -2595,4 +2598,21 @@ h1, .h1{
       left: 0;
       background: rgba(108, 117, 125, 0.31);
     }
+}
+
+.page_seotext{
+  a{
+    color: @red;
+  }
+}
+
+
+.search_results_page{
+  padding-bottom: 30px;
+  .product_list{
+    margin-bottom: 30px;
+    > div{
+      margin-bottom: 20px;
+    }
+  }
 }
