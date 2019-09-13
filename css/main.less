@@ -244,8 +244,12 @@ header{
         font-size: 14px;
       }
       @media (max-width:575px){
+        @media (min-width:376px){
+          font-size: 17px;
+        }
+      }
+      @media (max-width:330px){
         font-size: 13px;
-
       }
 
       @media (max-width:380px){
@@ -263,6 +267,11 @@ header{
           font-size: 14px;
         }
         @media (max-width:575px){
+          @media (min-width:376px){
+            font-size: 17px;
+          }
+        }
+        @media (max-width:330px){
           font-size: 13px;
         }
         &:hover, &:focus{
@@ -1171,12 +1180,18 @@ footer{
 
   .logo{
     margin-bottom: 40px;
+    @media (max-width:767px){
+      margin-bottom: 20px;
+    }
   }
   .footer_contacts_list{
     li{
       margin-bottom: 23px;
       @media (max-width:1200px){
         margin-bottom: 20px;
+      }
+      @media (max-width:767px){
+        margin-bottom: 10px;
       }
     }
     li, a{
@@ -1205,6 +1220,9 @@ footer{
   .col_left{
     @media (max-width:1200px){
       margin-bottom: 30px;
+    }
+    @media (max-width:767px){
+      margin-bottom: 15px;
     }
   }
   .col_right{
@@ -1241,6 +1259,9 @@ footer{
           @media (max-width:1200px){
             margin-bottom: 30px;
           }
+          @media (max-width:767px){
+            margin-bottom: 15px;
+          }
         }
       }
     }
@@ -1262,6 +1283,9 @@ footer{
           margin-bottom: 30px;
           @media (max-width:1200px){
             margin-bottom: 20px;
+          }
+          @media (max-width:767px){
+            margin-bottom: 10px;
           }
           &:last-child{
             margin-bottom: 0;
@@ -1392,11 +1416,22 @@ footer{
   border-bottom: 2px solid rgba(28, 34, 43, 0.3);
   padding-bottom: 10px;
 
+  &.decktop_sort{
+    @media (max-width:767px){
+      display: none;
+    }
+  }
+  &.mobile_sort{
+    @media (min-width:768px){
+      display: none;
+    }
+  }
   span{
     font-size: 15px;
     color: rgba(28, 34, 43, 0.65);
     margin-right: 10px;
   }
+
 
   .sort_select{
     .flex();
@@ -2004,6 +2039,9 @@ h1{
 
   .price_block{
     margin-bottom: 22px;
+    @media (max-width:767px){
+      text-align: center;
+    }
     .old_price{
       font-size: 22px;
       color: rgba(28, 34, 43, 0.4);
@@ -2049,6 +2087,9 @@ h1{
       height: 40px;
       font-size: 18px;
     }
+    @media (max-width:767px){
+      width: 100%;
+    }
     &:hover, &:focus{
       background: #b45958;
     }
@@ -2088,9 +2129,15 @@ h1{
 
   .size_block{
     margin-bottom: 10px;
+    @media (max-width:767px){
+      text-align: center;
+    }
     .radio_group{
       .flex();
       .wrap();
+      @media (max-width:767px){
+      .j-center();
+      }
 
       li{
         margin-bottom: 3px;
@@ -2613,6 +2660,15 @@ h1, .h1{
     margin-bottom: 30px;
     > div{
       margin-bottom: 20px;
+    }
+  }
+}
+
+.order_content{
+  .btn_default{
+    @media (max-width:767px){
+      width: 100%;
+      display: inline-block;
     }
   }
 }
